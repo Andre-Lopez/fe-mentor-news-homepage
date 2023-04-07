@@ -56,7 +56,7 @@ function App() {
 
           {/* Article 02 */}
           <div className="flexbox-row">
-            <img src="image-retro-pcs.jpg" alt="retro pc" className="article image" />
+            <img src="image-top-laptops.jpg" alt="retro pc" className="article image" />
             <div className="flexbox-col">
               <h3 className="article-num">02</h3>
               <h4 className="article-title">Top 10 Laptops of 2022</h4>
@@ -66,7 +66,7 @@ function App() {
 
           {/* Article 03 */}
           <div className="flexbox-row">
-            <img src="image-retro-pcs.jpg" alt="retro pc" className="article image" />
+            <img src="image-gaming-growth.jpg" alt="retro pc" className="article image" />
             <div className="flexbox-col">
               <h3 className="article-num">03</h3>
               <h4 className="article-title">The Growth of Gaming</h4>
