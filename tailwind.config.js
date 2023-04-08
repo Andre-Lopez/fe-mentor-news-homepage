@@ -6,7 +6,6 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
-      "bright-orange": "#e93e2d",
       "dark-grayish-blue": "hsl(236, 13%, 42%)",
       "grayish-blue": "hsl(233, 8%, 79%)",
       "off-white": "hsl(36, 100%, 99%)",
@@ -18,6 +17,10 @@ export default {
       fontFamily: {
         inter: ['"Inter"', ...defaultTheme.fontFamily.sans],
       },
+    },
+    letterSpacing: {
+      "supa-wide": "0.2em",
+      ...defaultTheme.letterSpacing,
     },
     screens: {
       xs: "375px",
