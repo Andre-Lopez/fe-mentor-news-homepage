@@ -6,6 +6,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
+      "bright-orange": "#e93e2d",
       "dark-grayish-blue": "hsl(236, 13%, 42%)",
       "grayish-blue": "hsl(233, 8%, 79%)",
       "off-white": "hsl(36, 100%, 99%)",
@@ -20,6 +21,7 @@ export default {
     },
     screens: {
       xs: "375px",
+      ...defaultTheme.screens,
     },
   },
   plugins: [],
