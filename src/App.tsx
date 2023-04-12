@@ -1,10 +1,44 @@
+import { useState } from "react"
 import "./App.css"
 
 function App() {
+  const [menuToggle, setMenuToggle] = useState(false)
+
+  function toggleMenu() {
+    setMenuToggle((prev) => !prev)
+  }
+
   return (
-    <div className="App flex flex-col mx-10 md:mx-44">
+    <div className="App flex flex-col relative max-w-5xl w-full mx-auto px-4">
+      {/* Mobile Nav Menu */}
+      {menuToggle && (
+        <div className="absolute top-0 bottom-0 right-0 z-40 w-1/2 pr-0 mr-0">
+          <button className="absolute top-5 right-5">
+            <img
+              src="icon-menu-close.svg"
+              alt="menu toggle"
+              className="md:hidden hover:cursor-pointer"
+              onClick={toggleMenu}
+            />
+          </button>
+          <ul className="flex flex-col bg-soft-red pl-4 pt-24">
+            <li className="font-inter font-medium mx-2 hover:text-soft-orange hover:cursor-pointer">Home</li>
+            <li className="font-inter font-medium mx-2 hover:text-soft-orange hover:cursor-pointer">New</li>
+            <li className="font-inter font-medium mx-2 hover:text-soft-orange hover:cursor-pointer">
+              Popular
+            </li>
+            <li className="font-inter font-medium mx-2 hover:text-soft-orange hover:cursor-pointer">
+              Trending
+            </li>
+            <li className="font-inter font-medium mx-2 hover:text-soft-orange hover:cursor-pointer">
+              Categories
+            </li>
+          </ul>
+        </div>
+      )}
+
       {/* Nav bar */}
-      <nav className="flex flex-row justify-between my-12 items-center">
+      <nav className="flex flex-row justify-between mt-14 mb-6 items-center">
         <img src="logo.svg" alt="news logo" />
         <ul className="hidden md:flex">
           <li className="font-inter font-medium mx-2 hover:text-soft-orange hover:cursor-pointer">Home</li>
@@ -17,15 +51,23 @@ function App() {
             Categories
           </li>
         </ul>
-        <img src="icon-menu-close.svg" alt="menu toggle" className="md:hidden" />
+        {!menuToggle && (
+          <img
+            src="icon-menu.svg"
+            alt="menu toggle"
+            className="md:hidden hover:cursor-pointer"
+            onClick={toggleMenu}
+          />
+        )}
       </nav>
 
       <main>
         <div className="flex flex-col md:flex-row">
           <div className="flex flex-col md:mr-6 md:basis-2/3">
-            <img src="image-web-3-desktop.jpg" alt="abstract main image" className="" />
+            <img src="image-web-3-mobile.jpg" alt="abstract main image" className="md:hidden" />
+            <img src="image-web-3-desktop.jpg" alt="abstract main image" className="hidden md:block" />
 
-            <div className="flex flex-col md:flex-row align-top py-8">
+            <div className="flex flex-col md:flex-row align-top py-8 md:pr-6">
               <h1 className="font-inter text-5xl font-bold md:mr-8 md:basis-1/2 md:pr-4">
                 The Bright Future of Web 3.0?
               </h1>
@@ -43,9 +85,9 @@ function App() {
           </div>
 
           {/* News Section */}
-          <article className="flex-col px-6 bg-very-dark-blue w-[500px] h-min py-2 md:basis-1/3">
-            <h2 className="text-soft-orange font-bold text-3xl my-4">New</h2>
-            <div className="sub-article border-b-[1px] border-solid border-grayish-blue pb-6">
+          <article className="flex-col px-6 bg-very-dark-blue w-[500px] h-min pt-2 md:basis-1/3">
+            <h2 className="text-soft-orange font-bold text-3xl mt-4">New</h2>
+            <div className="sub-article border-b-[1px] border-solid border-grayish-blue py-6">
               <h5 className="title font-inter text-off-white my-1 font-semibold text-lg hover:text-soft-orange hover:cursor-pointer">
                 Hydrogen VS Electric Cars
               </h5>
@@ -62,7 +104,7 @@ function App() {
               </p>
               <hr />
             </div>
-            <div className="sub-article py-6 px-1">
+            <div className="sub-article py-6">
               <h5 className="title font-inter text-off-white my-1 font-semibold text-lg hover:text-soft-orange hover:cursor-pointer">
                 Is VC Funding Drying Up?
               </h5>
@@ -73,7 +115,7 @@ function App() {
           </article>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-betweenm mt-4">
+        <div className="flex flex-col md:flex-row justify-between mt-4">
           {/* Article 01 */}
           <article className="flex w-[350px] mt-4 md:mt-0">
             <img src="image-retro-pcs.jpg" alt="retro pc" className="h-36 pr-4" />
