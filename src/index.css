@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .nav-link-desktop {
+    @apply font-inter font-medium mx-2 hover:text-soft-orange hover:cursor-pointer;
+  }
+
+  .nav-link-mobile {
+    @apply font-inter text-xl mx-2 my-3 hover:text-soft-orange hover:cursor-pointer;
+  }
+
+  .numbered-article-title {
+    @apply font-inter my-2 font-bold hover:text-soft-red hover:cursor-pointer;
+  }
+
+  .news-article-title {
+    @apply font-inter text-off-white my-1 font-semibold text-lg hover:text-soft-orange hover:cursor-pointer;
+  }
+}
