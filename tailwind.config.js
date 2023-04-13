@@ -15,16 +15,12 @@ export default {
     },
     extend: {
       fontFamily: {
-        inter: ['"Inter"', ...defaultTheme.fontFamily.sans],
+        Inter: ["Inter", "sans-serif", ...defaultTheme.fontFamily.sans],
       },
     },
     letterSpacing: {
-      "supa-wide": "0.2em",
+      "supa-wide": "0.35em",
       ...defaultTheme.letterSpacing,
-    },
-    screens: {
-      xs: "375px",
-      ...defaultTheme.screens,
     },
   },
   plugins: [],
