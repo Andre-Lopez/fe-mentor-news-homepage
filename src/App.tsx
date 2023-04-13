@@ -35,7 +35,7 @@ function App() {
       )}
 
       {/* Nav bar */}
-      <nav className="nav-bar flex flex-row justify-between mt-14 md:mt-14 mb-8 mx-8 md:mx-0 items-center">
+      <nav className="nav-bar flex flex-row justify-between mt-14 md:mt-14 mb-8 items-center">
         <img src="logo.svg" alt="news logo" />
         <ul className="nav-links hidden md:flex">
           <li className="nav-link-desktop">Home</li>
@@ -56,16 +56,16 @@ function App() {
 
       <main>
         <div className="flex flex-col md:flex-row">
-          <div className="flex flex-col md:mr-5 max-w-[660px]">
-            <img src="image-web-3-mobile.jpg" alt="abstract main image" className="block md:hidden" />
+          <div className="flex flex-col mx-auto md:mr-5 max-w-[660px]">
+            <img src="image-web-3-mobile.jpg" alt="abstract main image" className="md:hidden" />
             <img src="image-web-3-desktop.jpg" alt="abstract main image" className="hidden md:inline" />
 
             <div className="flex flex-col justify-center md:flex-row md:justify-between py-5">
-              <h1 className="font-Inter font-extrabold text-5xl md:max-w-[300px] md:mr-10 mb-4">
+              <h1 className="font-Inter font-extrabold text-4xl md:text-5xl md:max-w-[300px] md:mr-10 mb-4">
                 The Bright Future of Web 3.0?
               </h1>
 
-              <div className="flex-col justify-between max-w-[325px]">
+              <div className="flex-col items-center justify-between md:max-w-[325px]">
                 <h3 className="font-Inter text-dark-grayish-blue mb-4 text-[14px] font-semibold">
                   We dive into the next evolution of the web that claims to put the power of the platforms
                   back into the hands of the people. But is it really fulfilling its promise?
