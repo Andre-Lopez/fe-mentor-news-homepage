@@ -12,29 +12,36 @@ function App() {
     <div className="App flex flex-col relative max-w-5xl w-full mx-auto px-4">
       {/* Mobile Nav Menu */}
       {menuToggle && (
-        <div className="absolute top-0 bottom-0 right-0 z-40 w-1/2 pr-0 mr-0">
-          <button className="absolute top-5 right-5">
-            <img
-              src="icon-menu-close.svg"
-              alt="menu toggle"
-              className="md:hidden hover:cursor-pointer"
-              onClick={toggleMenu}
-            />
-          </button>
-          <ul className="flex flex-col bg-soft-red pl-4 pt-24">
-            <li className="font-inter font-medium mx-2 hover:text-soft-orange hover:cursor-pointer">Home</li>
-            <li className="font-inter font-medium mx-2 hover:text-soft-orange hover:cursor-pointer">New</li>
-            <li className="font-inter font-medium mx-2 hover:text-soft-orange hover:cursor-pointer">
-              Popular
-            </li>
-            <li className="font-inter font-medium mx-2 hover:text-soft-orange hover:cursor-pointer">
-              Trending
-            </li>
-            <li className="font-inter font-medium mx-2 hover:text-soft-orange hover:cursor-pointer">
-              Categories
-            </li>
-          </ul>
-        </div>
+        <>
+          <div className="Blur absolute top-0 bottom-0 right-0 left-0 z-30 max-h-screen bg-dark-grayish-blue opacity-70"></div>
+          <div className="absolute top-0 bottom-0 right-0 z-40 w-2/3 sm:w-1/2 max-h-screen bg-off-white">
+            <button className="absolute top-10 right-5">
+              <img
+                src="icon-menu-close.svg"
+                alt="menu toggle"
+                className="md:hidden hover:cursor-pointer"
+                onClick={toggleMenu}
+              />
+            </button>
+            <ul className="flex flex-col pl-4 pt-24 max-h-none">
+              <li className="font-inter text-xl mx-2 my-3 hover:text-soft-orange hover:cursor-pointer">
+                Home
+              </li>
+              <li className="font-inter text-xl mx-2 my-3 hover:text-soft-orange hover:cursor-pointer">
+                New
+              </li>
+              <li className="font-inter text-xl mx-2 my-3 hover:text-soft-orange hover:cursor-pointer">
+                Popular
+              </li>
+              <li className="font-inter text-xl mx-2 my-3 hover:text-soft-orange hover:cursor-pointer">
+                Trending
+              </li>
+              <li className="font-inter text-xl mx-2 my-3 hover:text-soft-orange hover:cursor-pointer">
+                Categories
+              </li>
+            </ul>
+          </div>
+        </>
       )}
 
       {/* Nav bar */}
