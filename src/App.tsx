@@ -80,22 +80,25 @@ function App() {
           {/* News Section */}
           <article className="news-section flex flex-col px-6 bg-very-dark-blue h-min pt-2 mt-8 md:mt-0 mx-auto">
             <h2 className="text-soft-orange font-bold text-3xl mt-3">New</h2>
-            <div className="sub-article border-b-[1px] border-solid border-grayish-blue/30 py-2">
-              <h5 className="news-article-title">Hydrogen VS Electric Cars</h5>
-              <p className="info news-article-details">Will hydrogen-fueled cars ever catch up to EVs?</p>
-            </div>
-            <div className="sub-article border-b-[1px] border-solid border-grayish-blue/30 py-6">
-              <h5 className="news-article-title">The Downsides of AI Artistry</h5>
-              <p className="info news-article-details">
-                What are the possible adverse effects of on-demand AI image generation?
-              </p>
-              <hr />
-            </div>
-            <div className="sub-article py-6">
-              <h5 className="news-article-title">Is VC Funding Drying Up?</h5>
-              <p className="info news-article-details">
-                Private funding by VC firms is down 50% YOY. We take a look at what that means.
-              </p>
+
+            <div className="flex flex-col divide-y-[1px] divide-opacity-40 divide-grayish-blue">
+              <div className="sub-article py-5">
+                <h5 className="news-article-title">Hydrogen VS Electric Cars</h5>
+                <p className="info news-article-details">Will hydrogen-fueled cars ever catch up to EVs?</p>
+              </div>
+              <div className="sub-article py-5">
+                <h5 className="news-article-title">The Downsides of AI Artistry</h5>
+                <p className="info news-article-details">
+                  What are the possible adverse effects of on-demand AI image generation?
+                </p>
+                <hr />
+              </div>
+              <div className="sub-article py-5">
+                <h5 className="news-article-title">Is VC Funding Drying Up?</h5>
+                <p className="info news-article-details">
+                  Private funding by VC firms is down 50% YOY. We take a look at what that means.
+                </p>
+              </div>
             </div>
           </article>
         </div>
